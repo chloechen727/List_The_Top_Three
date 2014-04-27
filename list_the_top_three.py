@@ -3,11 +3,16 @@
 # Time complexity: O(n)
 
 # Read the file line by line, and always only keep the top 3 max numbers while reading lines.
+# Run command as: python list_the_top_three.py sample1.dat
 
-input_file = open('input.txt', 'r')
+import sys
+
+sample_data = sys.argv[1]
+
+input_file = open(sample_data, 'r')
 current_top_three = [-1, -1, -1]
 
-for line in open('input.txt'):
+for line in open(sample_data):
 	element = int(input_file.readline())
 	if (element > current_top_three[0]):
 		if (element > current_top_three[1]):
